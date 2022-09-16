@@ -1,0 +1,32 @@
+.pagination {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    padding: 2rem;
+
+    .pagination__page {
+        margin: 0 1rem;
+    }
+
+
+    a {
+        padding: 0.3rem 0.8rem;
+        border-radius: 0.5rem;
+        border: 1px solid transparent;
+
+        &.disabled {
+            pointer-events: none;
+        }
+
+        span {
+            font-weight: 800;
+            opacity: 0.5;
+        }
+
+        &:hover {
+            border: 1px solid #d0d7de;
+        }
+    }
+}

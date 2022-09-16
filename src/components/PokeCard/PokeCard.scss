@@ -1,0 +1,42 @@
+@use '../../scss/' as *;
+
+.poke__card {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+    box-shadow: 1px 3px 12px 0 rgba(0, 0, 0, 0.3);
+    transition: transform .2s;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.9;
+        transform: scale(1.05);
+    }
+
+    .poke__id {
+        color: #000;
+    }
+
+    .poke__name {
+        color: #fff;
+        text-transform: capitalize;
+    }
+
+    .poke__image {
+        position: relative;
+        height: 8rem;
+        width: 8rem;
+
+        .poke__image-bg {
+            filter: opacity(30%);
+        }
+
+        .poke__image-ava {
+            position: absolute;
+            top: -3rem;
+            right: 0.5rem;
+        }
+    }
+}

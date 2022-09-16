@@ -1,0 +1,32 @@
+@use '../../scss/' as *;
+
+.list {
+    .list__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 1.5rem;
+        column-gap: 1.5rem;
+        padding: 2rem 0;
+    }
+}
+
+@include tablet {
+    .list {
+        .list__container {
+            grid-template-columns: 1fr 1fr;
+            row-gap: 2rem;
+            column-gap: 2rem;
+            padding: 2rem 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .list {
+        .list__container {
+            grid-template-columns: 1fr;
+            row-gap: 1.5rem;
+            padding: 2rem 0;
+        }
+    }
+}

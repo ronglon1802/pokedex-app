@@ -1,0 +1,267 @@
+@use './scss/' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto+Slab&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+    line-height: 1.7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+
+    &::selection {
+        background-color: #ffcc01;
+    }
+
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.container {
+    width: $container-width-lg;
+    margin: 0 auto
+}
+
+/* =========================== POKE TYPE COLOR =============================== */
+.poke__type {
+    &.grass {
+        background-color: $type-color-grass;
+    }
+
+    &.water {
+        background-color: $type-color-water;
+    }
+
+    &.fighting {
+        background-color: $type-color-fighting;
+    }
+
+    &.poison {
+        background-color: $type-color-poison;
+    }
+
+    &.psychic {
+        background-color: $type-color-psychic;
+    }
+
+    &.rock {
+        background-color: $type-color-rock;
+    }
+
+    &.ground {
+        background-color: $type-color-ground;
+    }
+
+    &.fire {
+        background-color: $type-color-fire;
+    }
+
+    &.flying {
+        background-color: $type-color-flying;
+    }
+
+    &.bug {
+        background-color: $type-color-bug;
+    }
+
+    &.normal {
+        background-color: $type-color-normal;
+    }
+
+    &.fairy {
+        background-color: $type-color-fairy;
+    }
+
+    &.electric {
+        background-color: $type-color-electric;
+    }
+
+    &.steel {
+        background-color: $type-color-steel;
+    }
+
+    &.ghost {
+        background-color: $type-color-ghost;
+    }
+
+    &.ice {
+        background-color: $type-color-ice;
+    }
+
+    &.dragon {
+        background-color: $type-color-dragon;
+    }
+
+    &.dark {
+        background-color: $type-color-dark;
+    }
+
+    &.shadow {
+        background-color: $type-color-shadow;
+    }
+
+    &.unknown {
+        background-color: $type-color-unknown;
+    }
+}
+
+/* ===================================== Card Backgound Color ==========================*/
+
+.poke__card {
+    &.grass {
+        background-color: $bg-color-grass;
+    }
+
+    &.water {
+        background-color: $bg-color-water;
+    }
+
+    &.fighting {
+        background-color: $bg-color-fighting;
+    }
+
+    &.poison {
+        background-color: $bg-color-poison;
+    }
+
+    &.psychic {
+        background-color: $bg-color-psychic;
+    }
+
+    &.rock {
+        background-color: $bg-color-rock;
+    }
+
+    &.ground {
+        background-color: $bg-color-ground;
+    }
+
+    &.fire {
+        background-color: $bg-color-fire;
+    }
+
+    &.flying {
+        background-color: $bg-color-flying;
+    }
+
+    &.bug {
+        background-color: $bg-color-bug;
+    }
+
+    &.normal {
+        background-color: $bg-color-normal;
+    }
+
+    &.fairy {
+        background-color: $bg-color-fairy;
+    }
+
+    &.electric {
+        background-color: $bg-color-electric;
+    }
+
+    &.steel {
+        background-color: $bg-color-steel;
+    }
+
+    &.ghost {
+        background-color: $bg-color-ghost;
+    }
+
+    &.ice {
+        background-color: $bg-color-ice;
+    }
+
+    &.dragon {
+        background-color: $bg-color-dragon;
+    }
+
+    &.dark {
+        background-color: $bg-color-dark;
+    }
+}
+
+
+.poke__types {
+    display: flex;
+
+    .poke__type {
+        @include flex(center, center);
+        text-transform: capitalize;
+        padding: 0.2rem;
+        border-radius: 0.5rem;
+        color: #fff;
+
+        &:not(:last-child) {
+            margin-right: 0.5rem;
+        }
+
+        &:hover {
+            cursor: pointer;
+            opacity: 0.8;
+        }
+
+        .poke__type-icon {
+            width: 1rem;
+
+            &:not(:last-child) {
+                margin-right: 0.2rem;
+            }
+        }
+    }
+}
+
+.loader {
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    border-top: 5px solid red;
+    border-left: 3px solid brown;
+    border-bottom: 1px solid purple;
+    border-right: transparent;
+    animation: spinner 0.8s linear infinite;
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@include tablet {
+    .container {
+        width: $container-width-md;
+    }
+}
+
+@include mobile {
+    .container {
+        width: $container-width-sm;
+    }
+}
