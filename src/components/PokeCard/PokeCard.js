@@ -1,7 +1,8 @@
 import React from "react";
 import './PokeCard.scss'
-import cardBg from '../../assets/card-bg.png'
+import cardBg from '../../assets/card-bg.png';
 import { Link } from 'react-router-dom';
+import Fire from '../../assets/poke-type-icon/Fire.svg'
 
 
 function PokeCard({ id, name, image, types }) {
@@ -18,7 +19,7 @@ function PokeCard({ id, name, image, types }) {
             {types.map((type, index) => (
               <div key={index} className={`poke__type ${type.type.name}`}>
                 <div className="poke__type-icon">
-                  <img src={`/poke-type-icon/${type.type.name}.svg`} alt='icon-poke-type' />
+                  <img src={require('../../assets/poke-type-icon/Fire.svg').default} alt='icon-poke-type' />
                 </div>
                 <span className="poke__type-name">{type.type.name}</span>
               </div>

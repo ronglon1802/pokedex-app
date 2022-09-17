@@ -133,7 +133,7 @@ const PokemonDetail = () => {
                                             {pokemon.types.map((item, index) => (
                                                 <div key={index} className={`poke__type ${item.type.name}`}>
                                                     <div className="poke__type-icon">
-                                                        <img src={`/poke-type-icon/${item.type.name}.svg`} alt='icon-poke-type' />
+                                                        <img src={require('../../assets/poke-type-icon/Fire.svg').default} alt='icon-poke-type' />
                                                     </div>
                                                     <span className="poke__type-name">{item.type.name}</span>
                                                 </div>
