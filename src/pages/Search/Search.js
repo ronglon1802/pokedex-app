@@ -11,6 +11,7 @@ const Search = () => {
     const [pokemons, setPokemons] = useState([]);
 
     const getPokemons = async () => {
+        setNotFound(false);
         const data = await GetPokemonData(url)
         if (data) {
             setPokemons([data])

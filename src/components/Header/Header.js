@@ -11,7 +11,7 @@ const Header = () => {
 
     const handleKeyDownSearch = (e) => {
         if (e.keyCode === 13) {
-            navigate(`search/${valueSearch}`)
+            navigate(`search/${valueSearch.toLowerCase()}`)
         }
     }
     const handleChangeValueInput = (e) => {
